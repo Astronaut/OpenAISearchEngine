@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign up</title>
+  <link rel="stylesheet" type="text/css" href="./client/src/styles.css">
+</head>
+<body>
+  <h1>Create an account</h1>
+  <form id="signup-form" action="/signup" method="post">
+    <label for="fullName">Full Name:</label>
+    <input type="text" name="fullName" id="fullName" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required>
+    <br>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+    <br>
+    <button type="submit">Sign up</button>
+  </form>
+
+  <script>
+    const form = document.querySelector('#signup-form');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+      });
+
+      if (response.ok) {
+        const { message } = await response.json();
+        alert(message);
+        form.reset();
+      } else {
+        const { message } = await response.json();
+        alert(message);
+      }
+    });
+  </script>
+</body>
+</html>

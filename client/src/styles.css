@@ -1,0 +1,76 @@
+body {
+  background-color: #282a36;
+  color: #ed2323;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #12ad07;
+}
+
+a {
+  color: #50fa7b;
+}
+
+button {
+  background-color: #6272a4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #81a1c1;
+}
+
+input[type="text"], input[type="password"] {
+  background-color: #44475a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 5px; /* Added vertical margin */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.form-group input[type="text"], .form-group input[type="password"] {
+  width: 100%;
+}
+
+.form-group button[type="submit"] {
+  width: 100%;
+}
+
+.search-form {
+  margin-top: 30px;
+}
+
+.search-form input[type="text"] {
+  width: 80%;
+  margin-right: 10px;
+}
+
+.search-form button[type="submit"] {
+  width: 20%;
+}
+
+.result {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.error {
+  color: #ff5555;
+}
